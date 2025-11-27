@@ -24,6 +24,10 @@
         {
             Button btn = (Button)sender;
             LblDisplay.Text += btn.Text;
+            if(btn.Text == "=")
+            {
+
+            }
 
         }
     }
