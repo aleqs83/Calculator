@@ -4,26 +4,35 @@
              x:Class="Calculator.MainPage">
 
 
-    <VerticalStackLayout>
-        <Label Text="3+3="/>
+    <VerticalStackLayout BackgroundColor="Gray">
+        <Label x:Name="LblDisplay" Text="3+3="  HorizontalOptions="End" FontSize="70" />
 
-        <Grid RowDefinitions="*,*,*,*" ColumnDefinitions="*,*,*,*" RowSpacing="10" ColumnSpacing="10">
-            <Button Grid.Column="0" Grid.Row="0" Text="7"></Button>
-            <Button Grid.Column="1" Grid.Row="0" Text="8"></Button>
-            <Button Grid.Column="2" Grid.Row="0" Text="9"></Button>
-            <Button Grid.Column="3" Grid.Row="0" Text="/"></Button>
-            <Button Grid.Column="0" Grid.Row="1" Text="4"></Button>
-            <Button Grid.Column="1" Grid.Row="1" Text="5"></Button>
-            <Button Grid.Column="2" Grid.Row="1" Text="6"></Button>
-            <Button Grid.Column="3" Grid.Row="1" Text="*"></Button>
-            <Button Grid.Column="0" Grid.Row="2" Text="1"></Button>
-            <Button Grid.Column="1" Grid.Row="2" Text="2"></Button>
-            <Button Grid.Column="2" Grid.Row="2" Text="3"></Button>
-            <Button Grid.Column="3" Grid.Row="2" Text="-"></Button>
-            <Button Grid.Column="0" Grid.Row="3" Text="0"></Button>
-            <Button Grid.Column="1" Grid.Row="3" Text="."></Button>
-            <Button Grid.Column="2" Grid.Row="3" Text="="></Button>
-            <Button Grid.Column="3" Grid.Row="3" Text="+"></Button>
+        <Grid RowDefinitions="*,*,*,*,*" ColumnDefinitions="*,*,*,*" RowSpacing="10" ColumnSpacing="10" >
+            <Button Grid.Column="0" Grid.Row="0" Text="AC" Clicked="ClearAllButton" Style="{StaticResource Button_Math}"></Button>
+            <Button Grid.Column="0" Grid.Row="1" Text="7" Clicked="Button_Clicked"></Button>
+            <Button Grid.Column="0" Grid.Row="2" Text="4" Clicked="Button_Clicked"></Button>
+            <Button Grid.Column="0" Grid.Row="3" Text="1" Clicked="Button_Clicked"></Button>
+            <Button Grid.Column="0" Grid.Row="4" Text=")" Clicked="Button_Clicked" Style="{StaticResource Button_Math}"></Button>
+
+            <Button Grid.Column="1" Grid.Row="0" Text="(" Clicked="Button_Clicked" Style="{StaticResource Button_Math}"></Button>
+            <Button Grid.Column="1" Grid.Row="1" Text="9" Clicked="Button_Clicked"></Button>
+            <Button Grid.Column="1" Grid.Row="2" Text="5" Clicked="Button_Clicked"></Button>
+            <Button Grid.Column="1" Grid.Row="3" Text="2" Clicked="Button_Clicked"></Button>
+            <Button Grid.Column="1" Grid.Row="4" Text="0" Clicked="Button_Clicked"></Button>
+            
+            <Button Grid.Column="2" Grid.Row="0" Text="%" Clicked="Button_Clicked" Style="{StaticResource Button_Math}"></Button>
+            <Button Grid.Column="2" Grid.Row="1" Text="8" Clicked="Button_Clicked"></Button>
+            <Button Grid.Column="2" Grid.Row="2" Text="6" Clicked="Button_Clicked"></Button>
+            <Button Grid.Column="2" Grid.Row="3" Text="3" Clicked="Button_Clicked"></Button>
+            <Button Grid.Column="2" Grid.Row="4" Text="." Clicked="Button_Clicked" Style="{StaticResource Button_Math}"></Button>
+
+            <Button Grid.Column="3" Grid.Row="0" Text="9" Clicked="Button_Clicked"></Button>
+            <Button Grid.Column="3" Grid.Row="1" Text="*" Clicked="Button_Clicked" Style="{StaticResource Button_Math}"></Button>
+            <Button Grid.Column="3" Grid.Row="2" Text="-" Clicked="Button_Clicked" Style="{StaticResource Button_Math}"></Button>
+            <Button Grid.Column="3" Grid.Row="3" Text="+" Clicked="Button_Clicked" Style="{StaticResource Button_Math}"></Button>
+            <Button Grid.Column="3" Grid.Row="4" Text="=" Clicked="Button_Clicked" Style="{StaticResource Button_Math}"></Button>
+
+            <Button Grid.Column="4" Grid.Row="0" Text="/" Clicked="Button_Clicked" Style="{StaticResource Button_Math}"></Button>
         </Grid>
     </VerticalStackLayout>
 
